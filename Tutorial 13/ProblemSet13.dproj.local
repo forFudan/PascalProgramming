@@ -1,0 +1,12 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<BorlandProject>
+	<Transactions>
+    <Transaction>2012-10-25 11:38:09.687.pas,X:\Data\My Documents\RAD Studio\Projects\Unit1.pas=X:\Data\My Documents\RAD Studio\Projects\Main.pas</Transaction>
+    <Transaction>2012-10-25 11:38:09.687.dfm,X:\Data\My Documents\RAD Studio\Projects\Unit1.dfm=X:\Data\My Documents\RAD Studio\Projects\Main.dfm</Transaction>
+    <Transaction>2012-10-25 11:54:09.140.pas,X:\Data\My Documents\RAD Studio\Projects\Main.pas=X:\Data\My Documents\delphi\Tutorial 13\Main.pas</Transaction>
+    <Transaction>2012-10-25 11:54:09.140.dfm,X:\Data\My Documents\RAD Studio\Projects\Main.dfm=X:\Data\My Documents\delphi\Tutorial 13\Main.dfm</Transaction>
+    <Transaction>2012-10-25 11:54:19.812.dproj,X:\Data\My Documents\RAD Studio\Projects\Project1.dproj=X:\Data\My Documents\delphi\Tutorial 13\ProblemSet13.dproj</Transaction>
+    <Transaction>2012-10-25 11:54:51.890.pas,X:\Data\My Documents\delphi\Tutorial 13\Unit1.pas=X:\Data\My Documents\delphi\Tutorial 13\Part1Calc.pas</Transaction>
+    <Transaction>2012-10-25 11:55:34.640.pas,X:\Data\My Documents\delphi\Tutorial 13\Part1Calc.pas=X:\Data\My Documents\delphi\Tutorial 13\Part1Calculate.pas</Transaction>
+  </Transactions>
+</BorlandProject>

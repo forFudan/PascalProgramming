@@ -1,0 +1,83 @@
+unit UnitCode;
+
+interface
+
+uses
+  Messages, SysUtils, Variants, Classes, Graphics, Controls, Forms,
+  Dialogs, StdCtrls;
+
+type
+  Tplanet = class(TObject)
+  private
+    name: string;
+    airType: string;
+  public
+    function getName: string;
+    function getAirType: string;
+    procedure setName(name: string);
+    procedure setAirType(airType: string);
+  end;
+
+  TAlien = class(TObject)
+  private
+    name: string;
+  public
+    homePlanet: TPlanet;
+    function Says: string; virtual;
+    function getName: string;
+    procedure setName(name: string);
+  end;
+
+  TKlingon = class(TAlien)
+  public
+    function Says: string; override;
+  end;
+
+  TNavi = class(TAlien)
+  public
+    function Says: string; override;
+  end;
+
+  TVulcan = class(TAlien)
+  public
+    function Says: string; override;
+  end;
+
+var
+  quonos: TPlanet;
+  Pandora: TPlanet;
+  Vulcan: TPlanet;
+
+implementation
+
+procedure Tplanet.setName(name: string);
+begin
+  quonos.name:='Qu''onos';
+  Pandora.name:='Pandora';
+  Vulcan.name:='Vulcan';
+end;
+
+procedure Tplanet.setAirType(airType: string);
+begin
+  quonos.airType:='E-type';
+  Pandora.airType:='F-type';
+  Vulcan.airType:='E-type';
+end;
+
+function TKlingon.Says: string;
+begin
+  result:= 'Kap''la!';
+end;
+
+function TNavi.Says: string;
+begin
+  result:= 'Toruk Makto';
+end;
+
+function TVulcan.Says: string;
+begin
+  result:= 'Live long and prosper';
+end;
+
+
+end.

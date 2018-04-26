@@ -1,0 +1,46 @@
+unit Main;
+
+interface
+
+uses
+  Windows, Messages, SysUtils, Variants, Classes, Graphics, Controls, Forms,
+  Dialogs, StdCtrls, ExtCtrls;
+
+type
+  TForm1 = class(TForm)
+    GroupBox1: TGroupBox;
+    GroupBox2: TGroupBox;
+    Part1winter: TButton;
+    Part1spring: TButton;
+    Part1Summer: TButton;
+    Part1Autumn: TButton;
+    GroupBox3: TGroupBox;
+    Part1Radiogroup: TRadioGroup;
+    Part1Memo: TMemo;
+    GroupBox4: TGroupBox;
+    GroupBox5: TGroupBox;
+    Part2createPerson: TButton;
+    Part2Createchildren: TButton;
+    Part2CreateGrandchildren: TButton;
+    GroupBox6: TGroupBox;
+    Part2Persontalks: TButton;
+    Part2Everybodytalks: TButton;
+    Output: TGroupBox;
+    Part2Memo: TMemo;
+    Button1: TButton;
+  private
+    { Private declarations }
+  public
+    { Public declarations }
+  end;
+
+var
+  Form1: TForm1;
+
+implementation
+
+{$R *.dfm}
+
+
+
+end.

@@ -1,0 +1,46 @@
+unit UnitCal;
+
+
+interface
+
+uses
+  Messages, SysUtils, Variants, Classes, Graphics, Controls, Forms, Dialogs, Math;
+
+
+function NextA(a, b: extended): extended;
+function NextB(a, b: extended): extended;
+function Nextt(a, t, p: extended):extended;
+function Nextp(p: extended): extended;
+function approximatepi(a, b, t:extended): extended;
+function calpi(a
+
+
+implementation
+
+function NextA(a, b: extended): extended;
+begin
+  result:= (a+b)/2;
+end;
+
+function NextB(a, b: extended): extended;
+begin
+  result:= sqrt(a * b);
+end;
+
+function Nextt(a, t, p, Na: extended):extended;
+begin
+  result:= t-p*power(a-Na,2);
+end;
+
+function Nextp(p: extended): extended;
+begin
+  result:= 2* p;
+end;
+
+function approximatepi(a, b, t:extended): extended;
+begin
+  result:= power(a+b,2)/(4*t);
+end;
+
+
+end.

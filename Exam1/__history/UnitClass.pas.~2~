@@ -1,0 +1,38 @@
+unit UnitClass;
+
+interface
+
+uses
+  Windows, Messages, SysUtils, Variants, Classes, Graphics, Controls, Forms,
+  Dialogs;
+
+type
+  TProgram = class
+    channel: String;
+    time: string;
+    title: string;
+  end;
+
+  TMovie = class(TProgram)
+    Genre: string;
+    minimumage: integer;
+  public
+    constructor create(channel, time, title, genre: string, mnimumage: integer);
+  end;
+
+  TShow = class(TProgram)
+    Host: string;
+  public
+    constructor createshow(channel, time, title, host: integer);
+  end;
+
+implementation
+
+constructor Tmovie.create(channel: string; time: string; title: string; genre: string; mnimumage: Integer);
+begin
+  self.channel:= channel;
+
+end;
+
+
+end.

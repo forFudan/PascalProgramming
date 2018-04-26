@@ -1,0 +1,37 @@
+unit UnitMainPS9;
+
+interface
+
+uses
+  Windows, Messages, SysUtils, Variants, Classes, Graphics, Controls, Forms,
+  Dialogs, StdCtrls, UnitCalcPS9;
+
+type
+  TForm1 = class(TForm)
+    GroupBox1: TGroupBox;
+    Label1: TLabel;
+    input: TEdit;
+    threesteps: TButton;
+    foursteps: TButton;
+    output: TMemo;
+    buttonclose: TButton;
+    procedure buttoncloseClick(Sender: TObject);
+  private
+    { Private declarations }
+  public
+    { Public declarations }
+  end;
+
+var
+  Form1: TForm1;
+
+implementation
+
+{$R *.dfm}
+
+procedure TForm1.buttoncloseClick(Sender: TObject);
+begin
+  form1.Close;
+end;
+
+end.

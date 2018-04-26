@@ -1,0 +1,88 @@
+unit ProblemSet3Main;
+
+interface
+
+uses
+  Windows, Messages, SysUtils, Variants, Classes, Graphics, Controls, Forms,
+  Dialogs, StdCtrls;
+
+type
+  TformMain = class(TForm)
+    Part1groupbox: TGroupBox;
+    GroupBox3: TGroupBox;
+    GroupBox4: TGroupBox;
+    mainbuttonclose: TButton;
+    part1edit1: TEdit;
+    part1label1: TLabel;
+    part1edit2: TEdit;
+    part1label2: TLabel;
+    GroupBox5: TGroupBox;
+    CheckBox2: TCheckBox;
+    CheckBox3: TCheckBox;
+    Label4: TLabel;
+    Label5: TLabel;
+    Label6: TLabel;
+    Label7: TLabel;
+    Edit3: TEdit;
+    Edit4: TEdit;
+    Edit5: TEdit;
+    Button1: TButton;
+    Label8: TLabel;
+    Memo1: TMemo;
+    CheckBox4: TCheckBox;
+    CheckBox5: TCheckBox;
+    CheckBox6: TCheckBox;
+    CheckBox7: TCheckBox;
+    part2groupbox: TGroupBox;
+    part2checkbox1: TCheckBox;
+    part2label1: TLabel;
+    mainlabel1: TLabel;
+    procedure mainbuttoncloseClick(Sender: TObject);
+    procedure part1edit1Change(Sender: TObject);
+    procedure part1edit2Change(Sender: TObject);
+    procedure part2checkbox1Click(Sender: TObject);
+  private
+    { Private declarations }
+  public
+    { Public declarations }
+  end;
+
+var
+  formMain: TformMain;
+
+implementation
+
+{$R *.dfm}
+
+procedure TformMain.part2checkbox1Click(Sender: TObject);
+var
+  display : boolean;
+begin
+  {if part2checkbox1.Checked = True then
+  begin
+    part2label1.caption := 'C is true'
+  end
+  else
+  begin
+    part2label1.Caption := 'C is false'
+  end;}
+  display := part2checkbox1.Checked;
+  part2label1.Caption := booltostr(display);
+end;
+
+procedure TformMain.mainbuttoncloseClick(Sender: TObject);
+begin
+  formmain.Close;
+end;
+
+procedure TformMain.part1edit1Change(Sender: TObject);
+begin
+  part1label2.caption := '= ' + part1edit1.Text + ' and ' + part1edit2.text
+end;
+
+procedure TformMain.part1edit2Change(Sender: TObject);
+begin
+  part1label2.caption := '= ' + part1edit1.Text + ' and ' + part1edit2.text
+end;
+
+end.

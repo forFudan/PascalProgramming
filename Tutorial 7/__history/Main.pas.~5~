@@ -1,0 +1,75 @@
+unit Main;
+
+interface
+
+uses
+  Windows, Messages, SysUtils, Variants, Classes, Graphics, Controls, Forms,
+  Dialogs, StdCtrls, ExtCtrls;
+
+type
+  TForm1 = class(TForm)
+    GroupBox1: TGroupBox;
+    GroupBox2: TGroupBox;
+    Part1winter: TButton;
+    Part1spring: TButton;
+    Part1Summer: TButton;
+    Part1Autumn: TButton;
+    GroupBox3: TGroupBox;
+    Part1Radiogroup: TRadioGroup;
+    Part1Memo: TMemo;
+    GroupBox4: TGroupBox;
+    GroupBox5: TGroupBox;
+    Part2createPerson: TButton;
+    Part2Createchildren: TButton;
+    Part2CreateGrandchildren: TButton;
+    GroupBox6: TGroupBox;
+    Part2Persontalks: TButton;
+    Part2Everybodytalks: TButton;
+    Output: TGroupBox;
+    Part2Memo: TMemo;
+    Closebutton: TButton;
+    procedure Click(Sender: TObject);
+    procedure ClosebuttonClick(Sender: TObject);
+  private
+    { Private declarations }
+  public
+    { Public declarations }
+  end;
+
+var
+  Form1: TForm1;
+
+implementation
+
+{$R *.dfm}
+
+procedure Tform1.Click(Sender: TObject);
+var
+  nameclass, explainname, componentname, caption: string;
+  itemnumber: integer;
+begin
+    part1memo.Lines.Clear;
+    itemnumber:= part1radiogroup.ItemIndex;
+    nameclass:= sender.ClassName;
+    if sender is Tbutton then begin
+      explainname:='button';
+      componentname:= (sender as Tbutton).Name;
+      caption:= (sender as TButton).Caption;
+    end;
+    if sender is TRadiogroup then begin
+      explainname:='radiogroup';
+      componentname:= (sender as TRadiogroup).Name;
+      caption:= (sender as TRadiogroup).Caption;
+    end;
+    part1memo.Lines.Add('The sender is an object of the class '+nameclass);
+    part1memo.Lines.Add('The '+explainname+' has the name '+componentname);
+    part1memo.Lines.Add('The '+explainname+' has the caption '+caption);
+    part1memo.Lines.Add('The '+explainname+chr(39)+'s item number is '+ inttostr(itemnumber));
+end;
+
+procedure TForm1.ClosebuttonClick(Sender: TObject);
+begin
+  form1.close;
+end;
+
+end.

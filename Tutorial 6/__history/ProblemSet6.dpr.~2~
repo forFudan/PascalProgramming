@@ -1,0 +1,14 @@
+program ProblemSet6;
+
+uses
+  Forms,
+  ProblemSet5Unit1 in 'ProblemSet5Unit1.pas' {Form1};
+
+{$R *.res}
+
+begin
+  Application.Initialize;
+  Application.MainFormOnTaskbar := True;
+  Application.CreateForm(TForm1, Form1);
+  Application.Run;
+end.

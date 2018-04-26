@@ -1,0 +1,25 @@
+object formMain: TformMain
+  Left = 0
+  Top = 0
+  Caption = 'Tutorial Class 2: Variables'
+  ClientHeight = 293
+  ClientWidth = 426
+  Color = clBtnFace
+  Font.Charset = DEFAULT_CHARSET
+  Font.Color = clWindowText
+  Font.Height = -11
+  Font.Name = 'Tahoma'
+  Font.Style = []
+  OldCreateOrder = False
+  PixelsPerInch = 96
+  TextHeight = 13
+  object buttonForClose: TButton
+    Left = 184
+    Top = 224
+    Width = 75
+    Height = 25
+    Caption = 'Close'
+    TabOrder = 0
+    OnClick = buttonForCloseClick
+  end
+end

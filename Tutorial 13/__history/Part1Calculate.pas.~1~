@@ -1,0 +1,55 @@
+unit Part1Calculate;
+
+interface
+
+Uses
+  Messages, SysUtils, Variants, Classes, Graphics, Controls, Forms,
+  Dialogs, Grids, Math, StdCtrls;
+
+function factorial(x: integer):integer;
+function builtInCosine(x: real):extended;
+function ComputeWithFor(x: real; n:integer):extended;
+
+Var
+  numOfStepsInfor : integer;
+
+implementation
+
+function factorial(x: integer): integer;
+var
+  i: integer; s: longint;
+begin
+  if x=0 then s:=1
+  else begin
+    s:= 1;
+    for i := 1 to x do begin
+    s:= s* i;
+    end;
+  result:= s;
+  end;
+end;
+
+function builtInCosine(x: real):extended;
+begin
+  result:= cos(x);
+end;
+
+function ComputeWithFor(x: real; n: integer):extended;
+var
+  i: integer; term, multiplication, s: extended;
+begin
+  s:= 1;
+  term:= 1;
+  for i := 1 to n do begin
+    multiplication:= (-1)* power(x, 2)/ ((2*i-1)*(2*i));
+    term:= term* multiplication;
+    s:= s+ term;
+  if n>0 then begin
+    result:= s
+  end
+  else result:=1;
+end;
+end;
+
+
+end.

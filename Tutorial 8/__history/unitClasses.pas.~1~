@@ -1,0 +1,49 @@
+unit unitClasses;
+
+interface
+uses
+  SysUtils, Variants, Classes, Graphics, Controls, Forms, Dialogs, StdCtrls;
+
+type
+  Tperson = class
+    private
+    name: string;
+    gender: string;
+    age: integer;
+    public
+    function talk;
+    function getname;
+    procedure setname;
+    function getgender;
+    procedure setgender;
+    function getage;
+    procedure setage;
+  end;
+
+var
+  aPerson: Tperson;
+
+implementation
+
+function talk;
+begin
+  result := 'I am an ordinary person!';
+end;
+
+function getname(name:string);
+begin
+  aperson.name := name;
+end;
+
+procedure setname;
+
+function getgender(gender:string);
+
+procedure setgender;
+
+function getage(age:integer);
+
+procedure setage;
+
+
+end.

@@ -1,0 +1,60 @@
+﻿	<Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+		<PropertyGroup>
+			<ProjectGuid>{A7EE7B3B-9759-48B2-817F-9EE33291135C}</ProjectGuid>
+		</PropertyGroup>
+		<ItemGroup>
+			<Projects Include="Exam1_medium.dproj">
+				<Dependencies/>
+			</Projects>
+			<Projects Include="Exam1_hard.dproj">
+				<Dependencies/>
+			</Projects>
+			<Projects Include="Exam1_easy.dproj">
+				<Dependencies/>
+			</Projects>
+		</ItemGroup>
+		<ProjectExtensions>
+			<Borland.Personality>Default.Personality.12</Borland.Personality>
+			<Borland.ProjectType/>
+			<BorlandProject>
+				<Default.Personality/>
+			</BorlandProject>
+		</ProjectExtensions>
+		<Target Name="Exam1_medium">
+			<MSBuild Projects="Exam1_medium.dproj"/>
+		</Target>
+		<Target Name="Exam1_medium:Clean">
+			<MSBuild Targets="Clean" Projects="Exam1_medium.dproj"/>
+		</Target>
+		<Target Name="Exam1_medium:Make">
+			<MSBuild Targets="Make" Projects="Exam1_medium.dproj"/>
+		</Target>
+		<Target Name="Exam1_hard">
+			<MSBuild Projects="Exam1_hard.dproj"/>
+		</Target>
+		<Target Name="Exam1_hard:Clean">
+			<MSBuild Targets="Clean" Projects="Exam1_hard.dproj"/>
+		</Target>
+		<Target Name="Exam1_hard:Make">
+			<MSBuild Targets="Make" Projects="Exam1_hard.dproj"/>
+		</Target>
+		<Target Name="Exam1_easy">
+			<MSBuild Projects="Exam1_easy.dproj"/>
+		</Target>
+		<Target Name="Exam1_easy:Clean">
+			<MSBuild Targets="Clean" Projects="Exam1_easy.dproj"/>
+		</Target>
+		<Target Name="Exam1_easy:Make">
+			<MSBuild Targets="Make" Projects="Exam1_easy.dproj"/>
+		</Target>
+		<Target Name="Build">
+			<CallTarget Targets="Exam1_medium;Exam1_hard;Exam1_easy"/>
+		</Target>
+		<Target Name="Clean">
+			<CallTarget Targets="Exam1_medium:Clean;Exam1_hard:Clean;Exam1_easy:Clean"/>
+		</Target>
+		<Target Name="Make">
+			<CallTarget Targets="Exam1_medium:Make;Exam1_hard:Make;Exam1_easy:Make"/>
+		</Target>
+		<Import Project="$(BDS)\Bin\CodeGear.Group.Targets" Condition="Exists('$(BDS)\Bin\CodeGear.Group.Targets')"/>
+	</Project>

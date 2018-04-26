@@ -1,0 +1,54 @@
+unit ProblemSet5Unit1;
+
+interface
+
+uses
+  Windows, Messages, SysUtils, Variants, Classes, Graphics, Controls, Forms,
+  Dialogs, StdCtrls, Math;
+
+type
+  TForm1 = class(TForm)
+    GroupBox1: TGroupBox;
+    Part1label1: TLabel;
+    part2label2: TLabel;
+    part1label3: TLabel;
+    part1edit1: TEdit;
+    part1edit2: TEdit;
+    part1edit3: TEdit;
+    part1button1: TButton;
+    part1memo1: TMemo;
+    function calDiscriminant(a:real; b:real; c:real; var d:real): real;
+    function Quadraticroots(a:real; b:real; c:real; d:real; var x1: real; var x2: real): integer;
+
+  private
+    { Private declarations }
+  public
+    { Public declarations }
+  end;
+
+var
+  Form1: TForm1;
+
+implementation
+{$R *.dfm}
+  function calDiscriminant(a:real; b:real; c:real; var d:real):real;
+  begin
+    d := power(b,2)-4*a*c;
+  end;
+
+  function Quadraticroots(a:real; b:real; c:real; d:real; var x1: real; var x2: real): integer;
+  begin
+    if d<0 then begin
+      result := 0;
+    end
+    else if d=0 then begin
+      result := 1;
+    end
+    else begin
+      result := 2;
+      x1 := (-b+sqrt(d))/(2*a);
+      x2 := (-b-sqrt(d))/(2*a);
+    end;
+
+  end;
+end.

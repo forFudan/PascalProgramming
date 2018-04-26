@@ -1,0 +1,15 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<BorlandProject>
+	<Transactions>
+    <Transaction>2012/11/03 21:51:41.719.dproj,C:\Users\Zhu Yuhao\Documents\RAD Studio\Projects\Project1.dproj=C:\Users\Zhu Yuhao\Documents\RAD Studio\Projects\Exam1_hard.dproj</Transaction>
+    <Transaction>2012/11/03 21:51:52.237.pas,C:\Users\Zhu Yuhao\Documents\RAD Studio\Projects\Unit2.pas=C:\Users\Zhu Yuhao\Documents\RAD Studio\Projects\UnitMain.pas</Transaction>
+    <Transaction>2012/11/03 21:51:52.237.dfm,C:\Users\Zhu Yuhao\Documents\RAD Studio\Projects\Unit2.dfm=C:\Users\Zhu Yuhao\Documents\RAD Studio\Projects\UnitMain.dfm</Transaction>
+    <Transaction>2012/11/03 21:52:10.281.pas,C:\Users\Zhu Yuhao\Documents\RAD Studio\Projects\UnitMain.pas=C:\Users\Zhu Yuhao\Documents\RAD Studio\Projects\UnitMainhard.pas</Transaction>
+    <Transaction>2012/11/03 21:52:10.281.dfm,C:\Users\Zhu Yuhao\Documents\RAD Studio\Projects\UnitMain.dfm=C:\Users\Zhu Yuhao\Documents\RAD Studio\Projects\UnitMainhard.dfm</Transaction>
+    <Transaction>2012/11/03 21:52:46.219.pas,C:\Users\Zhu Yuhao\Documents\RAD Studio\Projects\Unit1.pas=C:\Users\Zhu Yuhao\Documents\RAD Studio\Projects\UnitClassHard.pas</Transaction>
+    <Transaction>2012/11/03 23:06:38.200.pas,C:\Users\Zhu Yuhao\Documents\RAD Studio\Projects\UnitClassHard.pas=C:\Users\Zhu Yuhao\Documents\RAD Studio\Projects\Exam1\UnitClassHard.pas</Transaction>
+    <Transaction>2012/11/03 23:06:39.169.pas,C:\Users\Zhu Yuhao\Documents\RAD Studio\Projects\UnitMainhard.pas=C:\Users\Zhu Yuhao\Documents\RAD Studio\Projects\Exam1\UnitMainhard.pas</Transaction>
+    <Transaction>2012/11/03 23:06:39.169.dfm,C:\Users\Zhu Yuhao\Documents\RAD Studio\Projects\UnitMainhard.dfm=C:\Users\Zhu Yuhao\Documents\RAD Studio\Projects\Exam1\UnitMainhard.dfm</Transaction>
+    <Transaction>2012/11/03 23:06:40.985.dproj,C:\Users\Zhu Yuhao\Documents\RAD Studio\Projects\Exam1_hard.dproj=C:\Users\Zhu Yuhao\Documents\RAD Studio\Projects\Exam1\Exam1_hard.dproj</Transaction>
+  </Transactions>
+</BorlandProject>

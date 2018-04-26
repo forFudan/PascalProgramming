@@ -1,0 +1,49 @@
+unit UnitMain;
+
+interface
+
+uses
+  Windows, Messages, SysUtils, Variants, Classes, Graphics, Controls, Forms,
+  Dialogs, StdCtrls;
+
+type
+  TForm1 = class(TForm)
+    GroupBox1: TGroupBox;
+    GroupBox2: TGroupBox;
+    GroupBox3: TGroupBox;
+    Button1: TButton;
+    part1EditNum1: TEdit;
+    part1label1: TLabel;
+    part1EditNum2: TEdit;
+    part1Label2: TLabel;
+    part1Calulate: TButton;
+    Label3: TLabel;
+    Label4: TLabel;
+    Edit3: TEdit;
+    Edit4: TEdit;
+    Button3: TButton;
+    Memo1: TMemo;
+    Memo2: TMemo;
+    Edit5: TEdit;
+    Button4: TButton;
+    Label5: TLabel;
+    Edit6: TEdit;
+    Label6: TLabel;
+    Edit7: TEdit;
+    Button5: TButton;
+    Edit8: TEdit;
+
+  private
+    { Private declarations }
+  public
+    { Public declarations }
+  end;
+
+var
+  Form1: TForm1;
+
+implementation
+
+{$R *.dfm}
+
+end.

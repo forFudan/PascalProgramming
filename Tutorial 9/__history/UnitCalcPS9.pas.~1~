@@ -1,0 +1,14 @@
+unit UnitCalcPS9;
+
+interface
+
+uses
+  Messages, SysUtils, Variants, Classes, Graphics, Controls, Forms,
+  Dialogs, StdCtrls, Math;
+
+implementation
+  function CalculateAn(n:real):real;
+
+
+
+end.

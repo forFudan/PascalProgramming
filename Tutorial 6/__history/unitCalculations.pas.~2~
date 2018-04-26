@@ -1,0 +1,29 @@
+unit unitCalculations;
+
+interface
+
+function isDatecorrect(day, month, year: integer): boolean;
+
+implementation
+function isDatecorrect(day, month, year: integer): boolean;
+begin
+  result := 0;
+  case month of
+  1,3,5,7,8,10,12: result:=((month>=1) and (month<=31));
+  2: result:=((month>=1) and (month<=28));
+  4,6,9,11: result:=((month>=1) and (month<=30))
+  end;
+  if (year mod 100=0) then
+  begin
+    if ((year mod 400=0) and (month=2)) then
+    begin
+      result:=((month>=1) and (month<=29));
+    end
+  else if ((year mod 4=0) and (month=2)) then
+  begin
+    result:= ((month>=1) and (month<=29));
+  end;
+  end;
+
+end;
+end.

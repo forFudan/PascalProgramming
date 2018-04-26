@@ -1,0 +1,29 @@
+unit unitClasses;
+
+interface
+
+uses
+  SysUtils, Variants, Classes, Graphics, Controls, Forms,
+  Dialogs, StdCtrls, ExtCtrls;
+
+type
+  TPerson = Class(Tobject)
+    name : String;
+    son: TPerson;
+    daughter: TPerson;
+    public
+    function talk(a:string): string;
+  End;
+
+var
+  aperson : Tperson;
+
+implementation
+
+function Tperson.talk (a:string): string;
+begin
+  result:= 'My name is ' + a + '. My son is ' + Aperson.son.name +
+            '. My daughter is ' + Aperson.daughter.name;
+end;
+
+end.

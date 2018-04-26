@@ -1,0 +1,44 @@
+unit Main;
+
+interface
+
+uses
+  Windows, Messages, SysUtils, Variants, Classes, Graphics, Controls, Forms,
+  Dialogs, Grids, StdCtrls;
+
+type
+  TMainform = class(TForm)
+    Part1_Groupbox: TGroupBox;
+    Part1_Label_X: TLabel;
+    Part1_Edit_input: TEdit;
+    Part1_Button_Builtin: TButton;
+    Part1_Button_For: TButton;
+    Part1_Button_Repeat: TButton;
+    Part1_label_degree: TLabel;
+    Part1_Edit_degree: TEdit;
+    Part1_button_While: TButton;
+    Part1_Memo_output: TMemo;
+    GroupBox2: TGroupBox;
+    StringGrid1: TStringGrid;
+    Memo2: TMemo;
+    Button5: TButton;
+    Button6: TButton;
+    Button7: TButton;
+    Button8: TButton;
+    Label3: TLabel;
+    Edit3: TEdit;
+    Button9: TButton;
+  private
+    { Private declarations }
+  public
+    { Public declarations }
+  end;
+
+var
+  Mainform: TMainform;
+
+implementation
+
+{$R *.dfm}
+
+end.

@@ -1,0 +1,54 @@
+unit UnitMain;
+
+interface
+
+uses
+  Windows, Messages, SysUtils, Variants, Classes, Graphics, Controls, Forms,
+  Dialogs, StdCtrls, UnitClasses;
+
+type
+  TForm1 = class(TForm)
+    GroupBox1: TGroupBox;
+    ButtonCreateaperson: TButton;
+    GroupBox2: TGroupBox;
+    Label1: TLabel;
+    Label2: TLabel;
+    Label3: TLabel;
+    Editname: TEdit;
+    EditAge: TEdit;
+    EditGender: TEdit;
+    Part1Set: TButton;
+    buttonGet: TButton;
+    procedure CreateApersonClick(sender: TObject);
+    procedure setClick(sender: TObject);
+    procedure getclick(sender: TObject);
+  end;
+
+var
+  Form1: TForm1;
+
+implementation
+
+procedure Tform1.CreateApersonClick(sender: TObject);
+begin
+  aperson := tperson.create;
+end;
+
+procedure Tform1.getclick(sender: TObject);
+begin
+  editname.Text:= aperson.getname;
+  editgender.Text:=aperson.getgender;
+  editage.Text:=aperson.getage;
+end;
+
+procedure Tform1.setClick(sender: TObject);
+begin
+  if (length(Editname.Text)>2) and (strtofloat(Editage.Text)>=0) and
+     ((editgender.Text= 'Male') or (editgender.Text='Female')) then begin
+       aperson.setname(EditName.text);
+       aperson.setgender(EditGender.Text);
+       aperson.setage(EditAge.Text);
+     end;
+end;
+
+end.

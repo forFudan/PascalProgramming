@@ -1,0 +1,161 @@
+unit ProblemSet2FirstUnit;
+
+interface
+
+uses
+  Windows, Messages, SysUtils, Variants, Classes, Graphics, Controls, Forms,
+  Dialogs, StdCtrls;
+
+type
+  TformMain = class(TForm)
+    buttonForClose: TButton;
+    GroupBox1: TGroupBox;
+    P1Co: TButton;
+    P1FS: TLabel;
+    P1Re: TLabel;
+    P2SS: TLabel;
+    P1Edit1: TEdit;
+    P1Edit2: TEdit;
+    P1Me: TMemo;
+    GroupBox2: TGroupBox;
+    labelP2X: TLabel;
+    P2Result: TLabel;
+    labelP2Y: TLabel;
+    P2Add: TButton;
+    P2Edit1: TEdit;
+    P2Edit2: TEdit;
+    GroupBox3: TGroupBox;
+    p3Button1: TButton;
+    p3edit1: TEdit;
+    p3CheckBox1: TCheckBox;
+    GroupBox4: TGroupBox;
+    calEdit1: TEdit;
+    p3label1: TLabel;
+    calLabel1: TLabel;
+    calbutton1: TButton;
+    calMemo1: TMemo;
+    P1Button1: TButton;
+    procedure buttonForCloseClick(Sender: TObject);
+    procedure P1CoClick(Sender: TObject);
+    procedure P2AddClick(Sender: TObject);
+    procedure p3Button1Click(Sender: TObject);
+    procedure calbutton1Click(Sender: TObject);
+    procedure P1Button1Click(Sender: TObject);
+    procedure P2Edit1Change(Sender: TObject);
+    procedure calbutton1MouseEnter(Sender: TObject);
+    procedure P2Edit2Change(Sender: TObject);
+  private
+    { Private declarations }
+  public
+    { Public declarations }
+  end;
+
+var
+  formMain: TformMain;
+  booleaninput : string;
+  booleannum : real;
+  booleanresult : boolean;
+  P2Xo, P2Yo, P2sumo : String;
+  P2X, P2Y : real;
+
+implementation
+
+{$R *.dfm}
+
+procedure TformMain.buttonForCloseClick(Sender: TObject);
+begin
+   Close; {this is a predefined procedure in Delphi}
+end;
+
+
+procedure TformMain.P2AddClick(Sender: TObject);
+var
+  P2sum : Real;
+begin
+  P2Xo := P2Edit1.Text;
+  P2Yo := P2edit2.Text;
+  P2X := strtofloat(P2Xo);
+  P2Y := strtofloat(P2Yo);
+  P2sum := p2x + p2y;
+  p2sumo := floattostr(P2sum);
+  P2result.caption := 'X+Y='+P2sumo;
+  {P2result.caption := floattostr(strtofloat(P2edit1.text)+strtofloat(P2edit2.Text)); }
+end;
+
+procedure TformMain.P2Edit1Change(Sender: TObject);
+begin
+  p2result.caption := 'Result';
+end;
+
+procedure TformMain.P2Edit2Change(Sender: TObject);
+begin
+  p2result.caption := 'Result';
+end;
+
+procedure TformMain.p3Button1Click(Sender: TObject);
+begin
+  booleaninput := p3edit1.Text;
+  booleannum := strtofloat(booleaninput);
+  booleanresult := booleannum > 9;
+  p3checkbox1.checked := booleanresult;
+end;
+
+procedure TformMain.calbutton1Click(Sender: TObject);
+var
+  calexp, calsqr, calsin : real;
+  p2x : real;
+  calinput : string;
+begin
+  calmemo1.Lines.clear;
+  calinput := caledit1.Text;
+  p2x := strtofloat(calinput);
+  calexp := exp(p2x);
+  calsqr := sqr(p2x);
+  calsin := sin(p2x);
+  calmemo1.Lines.Add('for x='+ calinput + ' we have');
+  calmemo1.Lines.Add('exp(x)= '+ floattostr(calexp));
+  calmemo1.Lines.Add('sqr(x)= '+ floattostr(calsqr));
+  calmemo1.Lines.Add('sin(x)= '+ floattostr(calsin));
+end;
+
+
+procedure TformMain.calbutton1MouseEnter(Sender: TObject);
+var
+  calexp, calsqr, calsin : real;
+  calinput : string;
+begin
+  calmemo1.Lines.clear;
+  calinput := floattostr(p2x);
+  calexp := exp(p2x);
+  calsqr := sqr(p2x);
+  calsin := sin(p2x);
+  calmemo1.Lines.Add('for x='+ calinput + ' we have');
+  calmemo1.Lines.Add('exp(x)= '+ floattostr(calexp));
+  calmemo1.Lines.Add('sqr(x)= '+ floattostr(calsqr));
+  calmemo1.Lines.Add('sin(x)= '+ floattostr(calsin));
+end;
+
+procedure TformMain.P1Button1Click(Sender: TObject);
+begin
+P1me.Lines.Clear;
+end;
+
+procedure TformMain.P1CoClick(Sender: TObject);
+var
+  P1Nu1, P1Nu2, P1Nu3 : String;
+begin
+  P1Me.Lines.Clear;
+  P1Nu1 := P1Edit1.Text;
+  P1Nu2 := P1Edit2.Text;
+  P1Nu3 := P1Nu1 + P1Nu2;
+  P1Me.Lines.Add (P1Nu3);
+end;
+
+
+end.
+
+
+
+
+
+

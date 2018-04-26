@@ -1,0 +1,64 @@
+unit Main;
+
+interface
+
+uses
+  Windows, Messages, SysUtils, Variants, Classes, Graphics, Controls, Forms,
+  Dialogs, Grids, StdCtrls, Part1Calculate;
+
+type
+  TMainform = class(TForm)
+    Part1_Groupbox: TGroupBox;
+    Part1_Label_X: TLabel;
+    Part1_Edit_x: TEdit;
+    Part1_Button_Builtin: TButton;
+    Part1_Button_For: TButton;
+    Part1_Button_Repeat: TButton;
+    Part1_label_degree: TLabel;
+    Part1_Edit_degree: TEdit;
+    Part1_button_While: TButton;
+    Part1_Memo: TMemo;
+    GroupBox2: TGroupBox;
+    StringGrid1: TStringGrid;
+    Memo2: TMemo;
+    Button5: TButton;
+    Button6: TButton;
+    Button7: TButton;
+    Button8: TButton;
+    Label3: TLabel;
+    Edit3: TEdit;
+    Button9: TButton;
+    procedure Part1_Button_BuiltinClick(Sender: TObject);
+    procedure Part1_Button_ForClick(Sender: TObject);
+  private
+    { Private declarations }
+  public
+    { Public declarations }
+  end;
+
+var
+  Mainform: TMainform;
+
+implementation
+
+{$R *.dfm}
+
+procedure TMainform.Part1_Button_BuiltinClick(Sender: TObject);
+var
+  x: real;
+begin
+  x:= strtofloat(Part1_Edit_x.text);
+  Part1_memo.Lines.add('built in cos(x) = ' + floattostrf(builtincosine(x),fffixed, 19,1));
+  Part1_memo.Lines.add('----------');
+end;
+
+procedure TMainform.Part1_Button_ForClick(Sender: TObject);
+var
+  x: real;
+begin
+  numOfstepsInfor:= 16;
+  Part1_memo.Lines.add('cos(x) = ' + floattostrf(ComputeWithFor(x, numOfstepsInfor),fffixed, 19,1));
+  Part1_memo.Lines.add('computed with for, in ' + inttostr(numofStepsInfor) + ' steps');
+end;
+
+end.

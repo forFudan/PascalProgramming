@@ -1,0 +1,90 @@
+unit Main;
+
+interface
+
+uses
+  Windows, Messages, SysUtils, Variants, Classes, Graphics, Controls, Forms,
+  Dialogs, Grids, StdCtrls, Part1Calculate;
+
+type
+  TMainform = class(TForm)
+    Part1_Groupbox: TGroupBox;
+    Part1_Label_X: TLabel;
+    Part1_Edit_x: TEdit;
+    Part1_Button_Builtin: TButton;
+    Part1_Button_For: TButton;
+    Part1_Button_Repeat: TButton;
+    Part1_label_degree: TLabel;
+    Part1_Edit_degree: TEdit;
+    Part1_button_While: TButton;
+    Part1_Memo: TMemo;
+    GroupBox2: TGroupBox;
+    StringGrid1: TStringGrid;
+    part2memo: TMemo;
+    part2buttonroute: TButton;
+    part2buttondistance: TButton;
+    part2buttonchage: TButton;
+    part2buttoncompute: TButton;
+    Label3: TLabel;
+    part2editlength: TEdit;
+    Button9: TButton;
+    procedure Part1_Button_BuiltinClick(Sender: TObject);
+    procedure Part1_Button_ForClick(Sender: TObject);
+    procedure Part1_Button_RepeatClick(Sender: TObject);
+    procedure Part1_button_WhileClick(Sender: TObject);
+  private
+    { Private declarations }
+  public
+    { Public declarations }
+  end;
+
+var
+  Mainform: TMainform;
+
+implementation
+
+{$R *.dfm}
+
+procedure TMainform.Part1_Button_BuiltinClick(Sender: TObject);
+var
+  x: real;
+begin
+  x:= strtofloat(Part1_Edit_x.text);
+  Part1_memo.Lines.add('built in cos(x) = ' + floattostrf(cos(x),fffixed, 23,21));
+  Part1_memo.Lines.add('----------');
+end;
+
+procedure TMainform.Part1_Button_ForClick(Sender: TObject);
+var
+  x: real;
+begin
+  x:= strtofloat(Part1_Edit_x.text);
+  numOfstepsInfor:= 16;
+  Part1_memo.Lines.add('cos(x) = ' + floattostrf(ComputeWithFor(x, numOfstepsInfor),fffixed, 23,21));
+  Part1_memo.Lines.add('computed with for, in ' + inttostr(numofStepsInfor) + ' steps');
+  Part1_memo.Lines.add('----------');
+  end;
+
+procedure TMainform.Part1_Button_RepeatClick(Sender: TObject);
+var
+  x: real;
+begin
+  x:= strtofloat(Part1_Edit_x.text);
+  Part1_memo.Lines.add('cos(x) = ' + floattostrf(ComputeWithRepeat(x),fffixed, 23,21));
+  Part1_memo.Lines.add('computed with repeat, in ' + inttostr(repeatstep) + ' steps');
+  Part1_memo.Lines.add('----------');
+end;
+
+procedure TMainform.Part1_button_WhileClick(Sender: TObject);
+var
+  x:real;
+  degree: integer;
+begin
+  x:= strtofloat(Part1_Edit_x.text);
+  degree:= strtoint(part1_edit_degree.Text);
+  Part1_memo.Lines.add('cos(x) = ' + floattostrf(ComputeWithWhile(x, degree),fffixed, 23,21));
+  Part1_memo.Lines.add('computed with while, in ' + inttostr(whilestep) + ' steps');
+  Part1_memo.Lines.add('----------');
+end;
+
+end.

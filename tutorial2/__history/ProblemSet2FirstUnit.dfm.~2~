@@ -1,0 +1,219 @@
+object formMain: TformMain
+  Left = 0
+  Top = 0
+  ClientHeight = 481
+  ClientWidth = 707
+  Color = clBtnFace
+  Font.Charset = DEFAULT_CHARSET
+  Font.Color = clWindowText
+  Font.Height = -11
+  Font.Name = 'Tahoma'
+  Font.Style = []
+  OldCreateOrder = False
+  PixelsPerInch = 96
+  TextHeight = 13
+  object buttonForClose: TButton
+    Left = 256
+    Top = 432
+    Width = 75
+    Height = 25
+    Caption = 'Close'
+    TabOrder = 0
+    OnClick = buttonForCloseClick
+  end
+  object GroupBox1: TGroupBox
+    Left = 8
+    Top = 8
+    Width = 313
+    Height = 177
+    Caption = 'Part 1: Concatenate strings'
+    TabOrder = 1
+    object P1FS: TLabel
+      Left = 3
+      Top = 53
+      Width = 52
+      Height = 13
+      Caption = 'First String'
+    end
+    object P1Re: TLabel
+      Left = 4
+      Top = 72
+      Width = 30
+      Height = 13
+      Caption = 'Result'
+    end
+    object P2SS: TLabel
+      Left = 161
+      Top = 48
+      Width = 66
+      Height = 13
+      Caption = 'Second String'
+    end
+    object P1Co: TButton
+      Left = 64
+      Top = 48
+      Width = 75
+      Height = 25
+      Caption = 'Concatenate'
+      TabOrder = 0
+      OnClick = P1CoClick
+    end
+    object P1Edit1: TEdit
+      Left = 3
+      Top = 21
+      Width = 121
+      Height = 21
+      TabOrder = 1
+      Text = 'Delphi allows for text'
+    end
+    object P1Edit2: TEdit
+      Left = 145
+      Top = 21
+      Width = 121
+      Height = 21
+      TabOrder = 2
+      Text = 'and number processing'
+    end
+    object P1Me: TMemo
+      Left = 40
+      Top = 79
+      Width = 185
+      Height = 89
+      Lines.Strings = (
+        'Delphi allows for text and number '
+        'processing')
+      TabOrder = 3
+    end
+  end
+  object GroupBox2: TGroupBox
+    Left = 8
+    Top = 216
+    Width = 177
+    Height = 177
+    Caption = 'Part 2: Adding real numbers'
+    TabOrder = 2
+    object labelP2X: TLabel
+      Left = 23
+      Top = 48
+      Width = 14
+      Height = 13
+      Caption = 'X='
+    end
+    object P2Result: TLabel
+      Left = 64
+      Top = 144
+      Width = 30
+      Height = 13
+      Caption = 'Result'
+    end
+    object labelP2Y: TLabel
+      Left = 23
+      Top = 67
+      Width = 14
+      Height = 13
+      Caption = 'Y='
+    end
+    object P2Add: TButton
+      Left = 81
+      Top = 102
+      Width = 75
+      Height = 25
+      Caption = 'Add'
+      TabOrder = 0
+      OnClick = P2AddClick
+    end
+    object P2Edit1: TEdit
+      Left = 81
+      Top = 42
+      Width = 58
+      Height = 21
+      TabOrder = 1
+    end
+    object P2Edit2: TEdit
+      Left = 81
+      Top = 69
+      Width = 58
+      Height = 21
+      TabOrder = 2
+    end
+  end
+  object GroupBox3: TGroupBox
+    Left = 191
+    Top = 216
+    Width = 130
+    Height = 177
+    Caption = 'Part 3: boolean varibles'
+    TabOrder = 3
+    object p3label1: TLabel
+      Left = 23
+      Top = 48
+      Width = 14
+      Height = 13
+      Caption = 'X='
+    end
+    object p3Button1: TButton
+      Left = 43
+      Top = 102
+      Width = 75
+      Height = 25
+      Caption = 'check'
+      TabOrder = 0
+      OnClick = p3Button1Click
+    end
+    object p3edit1: TEdit
+      Left = 43
+      Top = 42
+      Width = 62
+      Height = 21
+      TabOrder = 1
+    end
+    object p3CheckBox1: TCheckBox
+      Left = 23
+      Top = 149
+      Width = 97
+      Height = 17
+      Caption = '>9?'
+      ParentShowHint = False
+      ShowHint = False
+      TabOrder = 2
+    end
+  end
+  object GroupBox4: TGroupBox
+    Left = 400
+    Top = 8
+    Width = 257
+    Height = 377
+    Caption = 'Prt3: Math Functions'
+    TabOrder = 4
+    object calLabel1: TLabel
+      Left = 23
+      Top = 48
+      Width = 14
+      Height = 13
+      Caption = 'X='
+    end
+    object calEdit1: TEdit
+      Left = 75
+      Top = 45
+      Width = 62
+      Height = 21
+      TabOrder = 0
+    end
+    object calbutton1: TButton
+      Left = 43
+      Top = 102
+      Width = 75
+      Height = 25
+      Caption = 'calculate'
+      TabOrder = 1
+      OnClick = calbutton1Click
+    end
+    object calMemo1: TMemo
+      Left = 16
+      Top = 167
+      Width = 185
+      Height = 89
+      TabOrder = 2
+    end
+  end
+end

@@ -1,0 +1,14 @@
+program ProblemSet13;
+
+uses
+  Forms,
+  Main in 'Main.pas' {Mainform};
+
+{$R *.res}
+
+begin
+  Application.Initialize;
+  Application.MainFormOnTaskbar := True;
+  Application.CreateForm(TMainform, Mainform);
+  Application.Run;
+end.

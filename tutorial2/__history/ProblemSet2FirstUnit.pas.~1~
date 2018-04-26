@@ -1,0 +1,31 @@
+unit ProblemSet2FirstUnit;
+
+interface
+
+uses
+  Windows, Messages, SysUtils, Variants, Classes, Graphics, Controls, Forms,
+  Dialogs, StdCtrls;
+
+type
+  TformMain = class(TForm)
+    buttonForClose: TButton;
+    procedure buttonForCloseClick(Sender: TObject);
+  private
+    { Private declarations }
+  public
+    { Public declarations }
+  end;
+
+var
+  formMain: TformMain;
+
+implementation
+
+{$R *.dfm}
+
+procedure TformMain.buttonForCloseClick(Sender: TObject);
+begin
+   Close; {this is a predefined procedure in Delphi}
+end;
+
+end.

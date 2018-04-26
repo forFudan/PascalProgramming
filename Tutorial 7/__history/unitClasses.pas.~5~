@@ -1,0 +1,92 @@
+unit unitClasses;
+
+interface
+
+uses
+  SysUtils, Variants, Classes, Graphics, Controls, Forms,
+  Dialogs, StdCtrls, ExtCtrls;
+
+type
+  TPerson = Class(Tobject)
+    name : String;
+    son: TPerson;
+    daughter: TPerson;
+    public
+    function talk(a:string): string;
+  End;
+
+var
+  aperson : Tperson;
+
+implementation
+
+function Tperson.talk (a:string): string;
+begin
+  if ((aperson.son = nil) and (aperson.daughter = nil)) then begin
+  // No son or daughter.
+    result:= 'My name is ' + a + '.';
+  end;
+  if ((aperson.son = nil) and (aperson.daughter <> nil)) then begin
+  // No son but daughter.
+    if ((aperson.daughter.son = nil) and (aperson.daughter.daughter = nil)) then begin
+      result:= 'My name is ' + a + '. My daughter is ' + Aperson.daughter.name + '.';
+    end;
+    if ((aperson.daughter.son = nil) and (aperson.daughter.daughter <> nil)) then begin
+    result:= 'My name is ' + a + '. My daughter is ' + Aperson.daughter.name +
+            '. Her daughter is ' + Aperson.daughter.daughter.name + '.';
+    end;
+    if ((aperson.daughter.son <> nil) and (aperson.daughter.daughter = nil)) then begin
+    result:= 'My name is ' + a + '. My daughter is ' + Aperson.daughter.name +
+            '. Her son is ' + Aperson.daughter.son.name + '.';
+    end;
+    if ((aperson.daughter.son <> nil) and (aperson.daughter.daughter <> nil)) then begin
+    result:= 'My name is ' + a + '. My daughter is ' + Aperson.daughter.name +
+            '. Her son is ' + Aperson.daughter.son.name + '. Her daughter is ' +
+            Aperson.daughter.daughter.name + '.';
+    end;
+  end;
+  if ((aperson.son <> nil) and (aperson.daughter = nil)) then begin
+  // No daughter but son.
+    if ((aperson.son.son = nil) and (aperson.son.daughter = nil)) then begin
+      result:= 'My name is ' + a + '. My son is ' + Aperson.son.name + '.';
+    end;
+    if ((aperson.son.son = nil) and (aperson.son.daughter <> nil)) then begin
+    result:= 'My name is ' + a + '. My son is ' + Aperson.son.name +
+            '. His daughter is ' + Aperson.son.daughter.name + '.';
+    end;
+    if ((aperson.son.son <> nil) and (aperson.son.daughter = nil)) then begin
+    result:= 'My name is ' + a + '. My son is ' + Aperson.son.name +
+            '. His son is ' + Aperson.son.son.name + '.';
+    end;
+    if ((aperson.son.son <> nil) and (aperson.son.daughter <> nil)) then begin
+    result:= 'My name is ' + a + '. My son is ' + Aperson.son.name +
+            '. His son is ' + Aperson.son.son.name + '. His daughter is ' +
+            Aperson.son.daughter.name + '.';
+    end;
+  end;
+  if ((aperson.son <> nil) and (aperson.daughter <> nil)) then begin
+  //  One son and one daughter.
+    if ((aperson.son.son = nil) and (aperson.son.daughter = nil)
+       and (aperson.daughter.son = nil) and (aperson.daughter.daughter = nil)) then begin
+      result:= 'My name is ' + a + '. My son is ' + Aperson.son.name + '.';
+    end;
+    if ((aperson.son.son = nil) and (aperson.son.daughter = nil)
+       and (aperson.daughter.son = nil) and (aperson.daughter.daughter = nil)) then begin
+    result:= 'My name is ' + a + '. My son is ' + Aperson.son.name +
+            '. His daughter is ' + Aperson.son.daughter.name + '.';
+    end;
+    if ((aperson.son.son = nil) and (aperson.son.daughter = nil)
+       and (aperson.daughter.son = nil) and (aperson.daughter.daughter = nil)) then begin
+    result:= 'My name is ' + a + '. My son is ' + Aperson.son.name +
+            '. His son is ' + Aperson.son.son.name + '.';
+    end;
+    if ((aperson.son.son = nil) and (aperson.son.daughter = nil)
+       and (aperson.daughter.son = nil) and (aperson.daughter.daughter = nil)) then begin
+    result:= 'My name is ' + a + '. My son is ' + Aperson.son.name +
+            '. His son is ' + Aperson.son.son.name + '. His daughter is ' +
+            Aperson.son.daughter.name + '.';
+    end;
+  end;
+end;
+
+end.

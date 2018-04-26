@@ -1,0 +1,55 @@
+unit UnitMain;
+
+interface
+
+uses
+  Windows, Messages, SysUtils, Variants, Classes, Graphics, Controls, Forms,
+  Dialogs, StdCtrls, UnitCode;
+
+type
+  TForm1 = class(TForm)
+    part1Groupbox: TGroupBox;
+    GroupBox2: TGroupBox;
+    GroupBox3: TGroupBox;
+    part1ButtonPlanets: TButton;
+    part1Label1: TLabel;
+    part1Label2: TLabel;
+    part1Label3: TLabel;
+    part1ButtonAliens: TButton;
+    part1Label4: TLabel;
+    part1Label5: TLabel;
+    part1Label6: TLabel;
+    Button3: TButton;
+    Label7: TLabel;
+    Label8: TLabel;
+    Label9: TLabel;
+    Edit1: TEdit;
+    Edit2: TEdit;
+    Edit3: TEdit;
+    Button4: TButton;
+    Memo1: TMemo;
+    buttonClose: TButton;
+    procedure part1ButtonPlanetsClick(Sender: TObject);
+  private
+    { Private declarations }
+  public
+    { Public declarations }
+  end;
+
+var
+  Form1: TForm1;
+  quonos: TPlanet;
+  Pandora: TPlanet;
+  Vulcan: TPlanet;
+
+implementation
+
+{$R *.dfm}
+
+procedure TForm1.part1ButtonPlanetsClick(Sender: TObject);
+begin
+  quonos := Tplanet.create;
+
+end;
+
+end.

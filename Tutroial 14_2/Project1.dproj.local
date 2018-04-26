@@ -1,0 +1,12 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<BorlandProject>
+	<Transactions>
+    <Transaction>2012/11/02 00:35:16.670.pas,C:\Users\Zhu Yuhao\Documents\RAD Studio\Projects\Unit1.pas=C:\Users\Zhu Yuhao\Documents\RAD Studio\Projects\UnitMain.pas</Transaction>
+    <Transaction>2012/11/02 00:35:16.670.dfm,C:\Users\Zhu Yuhao\Documents\RAD Studio\Projects\Unit1.dfm=C:\Users\Zhu Yuhao\Documents\RAD Studio\Projects\UnitMain.dfm</Transaction>
+    <Transaction>2012/11/02 00:35:27.419.pas,C:\Users\Zhu Yuhao\Documents\RAD Studio\Projects\Unit1.pas=C:\Users\Zhu Yuhao\Documents\RAD Studio\Projects\UnitClass.pas</Transaction>
+    <Transaction>2012/11/02 02:01:17.468.pas,C:\Users\Zhu Yuhao\Documents\RAD Studio\Projects\UnitClass.pas=C:\Users\Zhu Yuhao\Documents\RAD Studio\Projects\Tutroial 14_2\UnitClass.pas</Transaction>
+    <Transaction>2012/11/02 02:01:19.044.pas,C:\Users\Zhu Yuhao\Documents\RAD Studio\Projects\UnitMain.pas=C:\Users\Zhu Yuhao\Documents\RAD Studio\Projects\Tutroial 14_2\UnitMain.pas</Transaction>
+    <Transaction>2012/11/02 02:01:19.044.dfm,C:\Users\Zhu Yuhao\Documents\RAD Studio\Projects\UnitMain.dfm=C:\Users\Zhu Yuhao\Documents\RAD Studio\Projects\Tutroial 14_2\UnitMain.dfm</Transaction>
+    <Transaction>2012/11/02 02:01:20.226.dproj,C:\Users\Zhu Yuhao\Documents\RAD Studio\Projects\Project1.dproj=C:\Users\Zhu Yuhao\Documents\RAD Studio\Projects\Tutroial 14_2\Project1.dproj</Transaction>
+  </Transactions>
+</BorlandProject>
